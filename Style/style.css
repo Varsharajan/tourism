@@ -1,0 +1,117 @@
+.Container{
+    position:relative;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/tourism/Images/homepage1.jpg);
+    background-size: cover;
+    /* background:rgba(0,0,0,0); */
+    animation: animate 45s ease-in-out infinite;
+    
+} 
+ 
+@keyframes animate {
+    0%,100%{
+        background-image: url(/tourism/Images/homepage1.jpg);
+    }
+    25%{
+        background-image: url(/tourism/Images/homepage2.jpg);
+    }
+    50%{
+        background-image: url(/tourism/Images/homepage3.jpg);
+    }
+    75%{
+        background-image: url(/tourism/Images/homepage4.png);
+    }
+}
+.navbar{
+    margin-top: 0%;
+}
+.navbar img{
+   height:5%;
+   width:5%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 1.5rem 1.2rem;
+    position:relative;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+
+    border-top:3px solid orangered;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active{
+    border-top:3px solid orangered;   
+}
+
+.form-container{
+    border:2px solid black;
+    background-color:#90EE90;
+    opacity: .85;
+    padding:25px;
+    margin-top:60px;
+    box-shadow: 11px 10px 5px 0px rgba(71,14,58,0.48);
+}
+
+.form-container h4{
+    font: size 5px;
+    font-family: cursive;
+}
+
+.container{
+    margin-top:20px;
+}
+/* for flipping district cards */
+
+.card-flip  > div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+  }
+  
+  .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+   
+  }
+  
+  .card-flip:hover .card-front {
+    transform: rotateY(-180deg);
+  }
+    
+  .card-flip:hover .card-back {
+    transform: rotateY(0deg);
+  }
+
+  /* end of flipping */
+
+  .card-body h3{
+      color: whitesmoke;
+  }
+
+  .card-img-top{
+      width:100%;
+      height: 15vw;
+      object-fit:cover;
+  }
+
+  .fa:hover{
+      opacity:0.9;
+  }
+
+  .fa{
+      margin-right: 12px;
+  }
