@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kerala-Tourisam</title>
     <link rel="stylesheet" href="../tourism/Style/style.css">
+   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-</head>
+   <!-- telephone -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script> -->
+  </head>
 <body>
  
    
@@ -53,31 +57,58 @@
                 <div class="col-md-4 col-sm-4 col-xs-12"></div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <!-- form starts here -->
-                    <form class="form-container">
+                   
+                    <form class="form-container"  onsubmit="return validation()">
                        <center> <h4 >Sign-Up</h4></center>
-                       <div class="mb-3">
-                           <label for="username" class="form-label">username</label>
-                           <input type="text" class="form-control">
-                       </div>
+                       
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="email" id="emailentry" class="form-control"  aria-describedby="emailHelp" required placeholder="username@gmail.com">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Create Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                          
+                          <label for="phoneno" class="form-label">Phone-no</label>
+                          <input type="text" id="phn-no" class="form-control" required>
+                          <!-- to include country code along with phone-no -->
+                          <!-- <script>
+                            const phoneInputField = document.querySelector("#phn-no");
+                            const phoneInput = window.intlTelInput(phoneInputField, {
+                              utilsScript:
+                                "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                            });
+                          </script> -->
                         </div>
+                        <div class="mb-3">
+                         
+                            <label for="exampleInputPassword1" class="form-label" >Create Password</label>
+                            <input type="password" class="form-control" id="passEntry" required data-toggle="tooltip" data-placement="left"  data-html ="true" title="The password must be:
+                            <ul>
+                              <li>atleast 8 characters long</li>
+                              <li>contains atlest one uppercase</li>
+                              <li>contains atleast one lowercase</li>
+                              <li>contains atleast one digit</li>
+                              <li>contains atleast one special character(&,@,#,%...)</li>
+                             </ul>">
+                              <!-- for password visibility -->
+                             
+                             <i class="fa fa-eye" id="show_eye"></i>
+                        </div>    
+                       
+                        <br>
+                        <span id ="StrengthDisp" class="badge displayBadge" style="display: none;">Weak</span>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" id="confirm-password" required>
                             </div>
+                            
                         <div class="checkbox">
                             <label > 
-                                <input type="checkbox">I agree to the terms and conditions.
+                                <input type="checkbox" required>I agree to the terms and conditions.
 
                             </label>
                         </div>
                         <button type="submit" class="btn btn-danger btn-block ">Sign-Up</button>
+                        <script src="../tourism/Validation.js"></script>
                     </form>
                     <!-- form ends here -->
                 </div>
@@ -87,7 +118,5 @@
      </div>
     
     </div>
-  
-   
 </body>
 </html>

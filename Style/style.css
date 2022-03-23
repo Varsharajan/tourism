@@ -53,7 +53,7 @@
     background-color:#90EE90;
     opacity: .85;
     padding:25px;
-    margin-top:60px;
+    margin-top:30px;
     box-shadow: 11px 10px 5px 0px rgba(71,14,58,0.48);
 }
 
@@ -114,4 +114,21 @@
 
   .fa{
       margin-right: 12px;
+  }
+
+  /* password strength badge */
+  .displayBadge{
+      text-align: center;
+      color: azure;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+
+ /* password-visibility */
+  form i{
+    cursor: pointer;
+     float: right; 
+     margin-top:-30px; 
+     margin-left: 24px;
+     
   }
