@@ -5,8 +5,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url(/tourism/Images/homepage1.jpg);
-    background-size: cover;
-    /* background:rgba(0,0,0,0); */
+    background-size: cover; 
     animation: animate 45s ease-in-out infinite;
     
 } 
